@@ -27,3 +27,7 @@ section.new-tweet textarea {
 .counter {
     float: right;
 }
+
+.setRed {
+    color: red;
+}
