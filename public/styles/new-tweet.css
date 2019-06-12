@@ -34,3 +34,7 @@ section.new-tweet textarea {
 .setRed {
     color: red;
 }
+
+section.new-tweet .submit-button {
+    display: inline-block;
+}

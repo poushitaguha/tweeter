@@ -4,10 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// function buttonClick(ev) => ();
-
-//  $button.addEventListener('click', buttonClick);
-
 $(document).ready(function() {
 
 // Fake data taken from tweets.json
@@ -58,7 +54,7 @@ const data = [
     }
   ];
 
-function createTweetElement(data) {
+  function createTweetElement(data) {
 
     let tweetImage = data.user.avatars.small;
     let username = data.user.name;

@@ -3,7 +3,7 @@ article.tweet   {
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
-    border-color: lightgrey;    
+    border-color: lightgrey; 
 }
 
 article.tweet:hover {
@@ -11,7 +11,12 @@ article.tweet:hover {
     border-color: black;
 }
 
+article.tweet:hover header {
+    opacity: 1;
+}
+
 article.tweet header  {
+    opacity: 0.7;
     background-color: #ddd;
     height: 70px;
     padding: 10px;
