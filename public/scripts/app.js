@@ -9,5 +9,5 @@
 //  $button.addEventListener('click', buttonClick);
 
 $(document).ready(function() {
-    // console.log("Hello");
+    
 });
