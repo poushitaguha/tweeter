@@ -23,3 +23,18 @@
     font-weight: bold;
   }
 
+  #nav-bar #compose-button {
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+    background-color: lightcyan;
+    color: lightseagreen;
+    border-color: black;
+    margin-left: 55%;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  #nav-bar #compose-button:hover {
+    background-color: white;
+  }
