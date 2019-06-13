@@ -14,13 +14,15 @@ $(document).ready(function() {
             dataType: 'JSON',
             success: data => {
                 renderTweets(data);
-            }        
+            }      
         })
     };
 
     // Loops through tweets and calls createTweetElement for each tweet.
     // Then takes return value and appends it to the tweets container   
-    function renderTweets(tweets) {   
+    function renderTweets(tweets) {
+        // Empty old tweets before appending new tweets so that it doesn't appear twice on the page
+        $('.all-tweets').empty();
         tweets.forEach(function(item) {
             var $tweet = createTweetElement(item);
             $('.all-tweets').prepend($tweet);
@@ -80,16 +82,16 @@ $(document).ready(function() {
     // the tweet is valid and length is greater than 140 characters.
     $("#tweetform").on('submit', function(event) {
         event.preventDefault();
-        let tweet = $('textarea').val();
-        let tweetLength = $('textarea').val().length;
+        let tweet = $("textarea").val();
+        let tweetLength = $("textarea").val().length;
         if (!tweet) {
             let $tweetError = "Tweet is empty";
-            $('.error-message').text($tweetError);
-            $('.error-message').slideDown();
+            $(".error-message").text($tweetError);
+            $(".error-message").slideDown();
         } else if (tweetLength > 140) {
             let $tweetTooLong = "Tweet is longer than 140 characters";
-            $('.error-message').text($tweetTooLong);
-            $('.error-message').slideDown();
+            $(".error-message").text($tweetTooLong);
+            $(".error-message").slideDown();
         } else {
             $.ajax({
                 method: 'POST',

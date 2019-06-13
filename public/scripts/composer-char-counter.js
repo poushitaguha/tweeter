@@ -15,7 +15,7 @@ $(document).ready(function() {
         } else {
             $(".counter").text(remLength).removeClass("setRed");
             // Refresh error message
-            $('.error-message').text("");
+            $(".error-message").text("");
         }        
     });
 
