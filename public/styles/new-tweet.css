@@ -26,10 +26,13 @@ section.new-tweet textarea {
 }
 
 .counter {
-    color: blue;
-    font-style: italic;
-    font-weight: bold;
+    box-sizing: border-box;
+    width: 50%;
     float: right;
+    text-align: right;
+    font-style: italic;
+    color: blue;
+    font-weight: bold;
 }
 
 .setRed {
@@ -39,3 +42,9 @@ section.new-tweet textarea {
 section.new-tweet .submit-button {
     display: inline-block;
 }
+
+section.new-tweet .error-message {
+    color: red;
+    font-size: medium;
+    display: none;
+  }

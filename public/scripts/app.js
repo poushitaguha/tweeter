@@ -83,9 +83,16 @@ $(document).ready(function() {
         let tweet = $('textarea').val();
         let tweetLength = $('textarea').val().length;
         if (!tweet) {
-            alert ("Tweet not entered by the user !!");
-        } else if (tweetLength > 141) {
-            alert ("Tweet longer than 140 characters!!");
+        //     alert ("Tweet not entered by the user !!");
+        // } else if (tweetLength > 140) {
+        //     alert ("Tweet longer than 140 characters!!");
+        let $tweetError = `<p class="error-message">Tweet is empty</p>`
+        $('.counter').append($tweetError);
+        $('.error-message').toggle();
+        } else if (tweetLength > 140) {
+            let $tweetTooLong = `<p class="error-message">Tweet is longer than 140 characters</p>`
+            $('.counter').append($tweetTooLong);
+            $('.error-message').toggle();
         } else {
             $.ajax({
                 method: 'POST',
