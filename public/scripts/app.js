@@ -68,13 +68,13 @@ $(document).ready(function() {
     <section class="tweets-container">
           <article class="tweet">
               <header>
-                  <img src=${tweetImage} >
-                  <span class="username">${username}</span>
-                  <span class="handle">${userHandle}</span>
+                  <img src=${escape(tweetImage)} >
+                  <span class="username">${escape(username)}</span>
+                  <span class="handle">${escape(userHandle)}</span>
               </header>
-              <div class="tweet-text">${tweetBody}</div>
+              <div class="tweet-text">${escape(tweetBody)}</div>
               <footer>
-                  <span class="days-display">${daysElapsed} day(s) ago</span>
+                  <span class="days-display">${escape(daysElapsed)} day(s) ago</span>
                   <span class="icon">
                       <img src="/images/icons.png"
                   </span>
@@ -85,6 +85,12 @@ $(document).ready(function() {
 
     return HTMLToAppend;
   }  
+
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   function renderTweets(tweets) {
     // loops through tweets
