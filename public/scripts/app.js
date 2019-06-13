@@ -47,6 +47,7 @@ $(document).ready(function() {
         let currentTime = Math.floor(Date.now());
         let daysElapsed = Math.floor((currentTime - tweetCreateDate) / (1000*60*60*24));
 
+        // Appending HTML data
         let HTMLToAppend =  `
         <section class="tweets-container">
             <article class="tweet">
