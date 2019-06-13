@@ -47,4 +47,9 @@ section.new-tweet .error-message {
     color: red;
     font-size: medium;
     display: none;
+    margin: 0;
+    padding-bottom: 5px;
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
   }

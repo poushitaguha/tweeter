@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-  // Loads tweet function which executes a GET request to load tweets
+    // Loads tweet function which executes a GET request to load tweets
     function loadTweets () {
         $.ajax({
             method: 'GET',
@@ -35,37 +35,37 @@ $(document).ready(function() {
     };
 
     // Function to create the tweet container dynamically and return new tweet
-  function createTweetElement(data) {
+    function createTweetElement(data) {
 
-    let tweetImage = data.user.avatars.small;
-    let username = data.user.name;
-    let userHandle = data.user.handle;
-    let tweetBody = data.content.text;
-    let tweetCreateDate = data.created_at;
-    let currentTime = Math.floor(Date.now());
-    let daysElapsed = Math.floor((currentTime - tweetCreateDate) / (1000*60*60*24));
+        let tweetImage = data.user.avatars.small;
+        let username = data.user.name;
+        let userHandle = data.user.handle;
+        let tweetBody = data.content.text;
+        let tweetCreateDate = data.created_at;
+        let currentTime = Math.floor(Date.now());
+        let daysElapsed = Math.floor((currentTime - tweetCreateDate) / (1000*60*60*24));
 
-    let HTMLToAppend =  `
-    <section class="tweets-container">
-          <article class="tweet">
-              <header>
-                  <img src=${escape(tweetImage)} >
-                  <span class="username">${escape(username)}</span>
-                  <span class="handle">${escape(userHandle)}</span>
-              </header>
-              <div class="tweet-text">${escape(tweetBody)}</div>
-              <footer>
-                  <span class="days-display">${escape(daysElapsed)} day(s) ago</span>
-                  <span class="icon">
-                      <img src="/images/icons.png"
-                  </span>
-              </footer>
-          </article>
-      </section>
-      `;
+        let HTMLToAppend =  `
+        <section class="tweets-container">
+            <article class="tweet">
+                <header>
+                    <img src=${escape(tweetImage)} >
+                    <span class="username">${escape(username)}</span>
+                    <span class="handle">${escape(userHandle)}</span>
+                </header>
+                <div class="tweet-text">${escape(tweetBody)}</div>
+                <footer>
+                    <span class="days-display">${escape(daysElapsed)} day(s) ago</span>
+                    <span class="icon">
+                        <img src="/images/icons.png"
+                    </span>
+                </footer>
+            </article>
+        </section>
+        `;
 
-    return HTMLToAppend;
-  }  
+        return HTMLToAppend;
+    }  
 
   // Code to toogle form
   $('#compose-button').on('click', function (event) {
@@ -83,16 +83,13 @@ $(document).ready(function() {
         let tweet = $('textarea').val();
         let tweetLength = $('textarea').val().length;
         if (!tweet) {
-        //     alert ("Tweet not entered by the user !!");
-        // } else if (tweetLength > 140) {
-        //     alert ("Tweet longer than 140 characters!!");
-        let $tweetError = `<p class="error-message">Tweet is empty</p>`
-        $('.counter').append($tweetError);
-        $('.error-message').toggle();
+            let $tweetError = "Tweet is empty";
+            $('.error-message').text($tweetError);
+            $('.error-message').slideDown();
         } else if (tweetLength > 140) {
-            let $tweetTooLong = `<p class="error-message">Tweet is longer than 140 characters</p>`
-            $('.counter').append($tweetTooLong);
-            $('.error-message').toggle();
+            let $tweetTooLong = "Tweet is longer than 140 characters";
+            $('.error-message').text($tweetTooLong);
+            $('.error-message').slideDown();
         } else {
             $.ajax({
                 method: 'POST',

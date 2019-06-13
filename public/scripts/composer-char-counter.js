@@ -9,11 +9,13 @@ $(document).ready(function() {
         let remLength = 140 - tweetLength;
         // Update the counter in tweeter page
         $(".counter").text(remLength);
-        //Set the character counter to red if it goes below 0 by adding a class
+        // Set the character counter to red if it goes below 0 by adding a class
         if (remLength < 0) {
             $(".counter").text(remLength).addClass("setRed");
         } else {
             $(".counter").text(remLength).removeClass("setRed");
+            // Refresh error message
+            $('.error-message').text("");
         }        
     });
 
