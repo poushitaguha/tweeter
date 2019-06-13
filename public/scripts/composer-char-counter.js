@@ -17,16 +17,4 @@ $(document).ready(function() {
         }        
     });
 
-// Following code submits a request to the server using JQuery
-    $(".submit-button").on('click', function(event) {
-        $.ajax({
-            type: 'POST',
-            url: "/tweets",
-            datatype: 'JSON',
-            data: $( "form" ).serialize()
-        })
-        .done(event.preventDefault())
-         console.log($( "form" ).serialize())
-    })
-
   });
