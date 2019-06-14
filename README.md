@@ -21,15 +21,22 @@ This app uses HTML, CSS, JS, jQuery and AJAX on the front-end and Node, Express 
 
 ## Screenshots
 
+Tweeter Home Page -
+
 ![Tweeter Home Page](https://github.com/poushitaguha/tweeter/blob/master/docs/tweeter-home-page.png "Tweeter Home Page")
 
+
+Compose Tweet Page -
 
 ![Compose Tweet Page](https://github.com/poushitaguha/tweeter/blob/master/docs/compose-tweet-page.png "Compose Tweet Page")
 
 
+No Tweet Error Page -
+
 ![No Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/no-tweet-error-page.png "No Tweet Error Page")
 
 
-![Long Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/long-tweet-error-page.png "Long Tweet Error Page")
+Long Tweet Error Page -
 
+![Long Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/long-tweet-error-page.png "Long Tweet Error Page")
 
