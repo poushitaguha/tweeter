@@ -7,15 +7,14 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
+// Declaration for MongoDB client and connection to the database
 const {MongoClient} = require("mongodb");
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// The in-memory database of tweets. It's a basic object with an array in it.
-// const db = require("./lib/in-memory-db");
-
+// Connect to MongoDB which calls the database tweeter containing tweets
 MongoClient.connect(MONGODB_URI, function(err, db) {
   if (err) {
     console.log(`Failed to connect to ${MONGODB_URI}`);
