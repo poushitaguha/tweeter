@@ -21,17 +21,15 @@ This app uses HTML, CSS, JS, jQuery and AJAX on the front-end and Node, Express 
 
 ## Screenshots
 
+![Tweeter Home Page](https://github.com/poushitaguha/tweeter/blob/master/docs/tweeter-home-page.png "Tweeter Home Page")
 
 
-![TinyApp Registration Page](https://github.com/poushitaguha/tinyapp/blob/master/docs/TinyApp%20Registration%20Page.png "TinyApp Registration Page")
+![Compose Tweet Page](https://github.com/poushitaguha/tweeter/blob/master/docs/compose-tweet-page.png "Compose Tweet Page")
 
 
-![TinyApp Login Page](https://github.com/poushitaguha/tinyapp/blob/master/docs/TinyApp%20Login%20Page.png "TinyApp Login Page")
+![No Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/no-tweet-error-page.png "No Tweet Error Page")
 
 
-![TinyApp Create URL Page](https://github.com/poushitaguha/tinyapp/blob/master/docs/TinyApp%20create%20new%20URL%20page.png "TinyApp Create URL Page")
-
-
-![TinyApp URL display page](https://github.com/poushitaguha/tinyapp/blob/master/docs/TinyApp%20URL%20display%20page.png "TinyApp URL display page")
+![Long Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/long-tweet-error-page.png "Long Tweet Error Page")
 
 
