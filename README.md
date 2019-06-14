@@ -40,3 +40,7 @@ Long Tweet Error Page -
 
 ![Long Tweet Error Page](https://github.com/poushitaguha/tweeter/blob/master/docs/long-tweet-error-page.png "Long Tweet Error Page")
 
+
+Responsive Design Page of Tweeter -
+
+![Tweeter Responsive Design](https://github.com/poushitaguha/tweeter/blob/master/docs/tweeter-responsive-design.png "Tweeter Responsive Design")
